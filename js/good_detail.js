@@ -13,7 +13,20 @@ $(function(){
             
         },
     );
-
+    eventListen()
+     function eventListen(){
+         $('.addCar').on('tap',function(){
+            if(sessionStorage.getItem("data")){
+                console.log("已经登录成功跳转到购买页面");
+                
+            }else{
+                var href = location.href
+                sessionStorage.setItem('goodHref',href)
+                location.href="./login.html"
+            }
+         })
+     }
+    
     function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);

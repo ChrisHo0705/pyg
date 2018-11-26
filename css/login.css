@@ -1,0 +1,22 @@
+.pyg_header {
+  padding: 0 5px;
+}
+
+.pyg_view form {
+  margin: 5px;
+}
+
+.pyg_view .btn_lr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pyg_view .btn_lr a, .pyg_view .btn_lr button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=login.css.map */

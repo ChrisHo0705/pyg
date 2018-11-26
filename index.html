@@ -103,12 +103,12 @@
             <ul class="pyg_goodsdetail">
                 {{each value.goods value1 index1}}
                 <li>
-                    <a href="javascript:;">
+                    <a href="./pages/good_detail.html?id={{value1.goods_id}}">
                         <img src="{{value1.goods_small_logo}}" alt="">
                         <p>{{value1.goods_name}}</p>
                         <span>￥{{value1.goods_price}}</span>
                     </a>
-                    <a href="javascript:;" class="mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
+                    <a href="./pages/good_list.html?cid={{value1.cat_id}}" class="mui-btn mui-btn-primary mui-btn-outlined">找相似</a>
                 </li>
                 {{/each}}
             </ul> 

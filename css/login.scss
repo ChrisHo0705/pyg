@@ -1,0 +1,19 @@
+.pyg_header{
+    padding: 0 5px;
+}
+.pyg_view{
+    form{
+        margin: 5px;
+        
+    }
+    .btn_lr{
+        display: flex;
+        padding: 5px;
+        flex-wrap: wrap;
+        a,button{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+}

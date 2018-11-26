@@ -1,0 +1,29 @@
+.pyg_header{
+    padding: 0 5px;
+}
+.pyg_view{
+    form{
+        margin: 5px;
+        .vcode{
+            position: relative;
+            .btn_vcode{
+                position: absolute;
+                right: 4px;
+                height: 30px;
+                 top: 5px;
+                width: auto;
+                padding-top: 7px;
+            }
+        }
+        
+    }
+    .btn_lr{
+        display: flex;
+        padding: 5px;
+        justify-content: space-between;
+        a,button{
+            width: 49%;
+        }
+    }
+
+}

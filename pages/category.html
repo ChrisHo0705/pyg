@@ -29,13 +29,13 @@
     <div class="pyg_footer">
         <ul>
             <li>
-                <a href="javascript:;">
+                <a href="../index.html">
                     <span class="fa fa-home"></span>
                     <div>首页</div>
                 </a>
             </li>
             <li>
-                <a href="./pages/category.html">
+                <a href=".category.html">
                     <span class="fa fa-list-ul"></span>
                     <div>分类</div>
                 </a>
@@ -81,7 +81,7 @@
                                         {{each value.children subvalue subindex}}
                                      <li>
                                          <a href="./good_list.html?cid={{subvalue.cat_id}}">
-                                                <img src="http://api.pyg.ak48.xyz/{{subvalue.cat_icon}}"
+                                                <img src="{{$imports.baseUrl}}{{subvalue.cat_icon}}"
                                                     alt="">
                                             </a>
                                             <div>{{subvalue.cat_name}}</div>

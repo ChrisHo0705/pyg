@@ -9,24 +9,33 @@
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/commen.css">
-    <link rel="stylesheet" href="../css/good_list.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav pyg_header">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="./category.html"></a>
-        <h1 class="mui-title">商品列表</h1>
-        <a class="mui-icon mui-icon-bars mui-pull-right"></a>
+        <h1 class="mui-title">登录</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
     </header>
+
     <div class="pyg_view">
-        <div>
-                <ul class="goodlist">
-
-                    </ul>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" class="mui-input-clear" placeholder="请输入用户名" name="mobile" value="17727682603">
+            </div>
+            
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入密码" name="pwd">
+            </div>
+        </form>
+        <div class="btn_lr">
+            <a href="./register.html" class="mui-btn mui-btn-primary mui-btn-outlined">注册</a>
+            <button type="button" class="mui-btn mui-btn-primary" id="login">登录</button>
         </div>
-        
-    </div>
 
+    </div>
     <div class="pyg_footer">
         <ul>
             <li>
@@ -56,31 +65,11 @@
 
         </ul>
     </div>
-    <!-- 模板引擎 -->
-    <!-- 商品列表 -->
-    <script type="text/template" id="goodListTemp">
-
-        {{each data value index}}
-            <li>
-                <a href="./good_detail.html?id={{value.goods_id}}">
-                    <img src="{{value.goods_small_logo}}" alt="">
-                </a>
-                <a href="./good_detail.html?id={{value.goods_id}}">
-                    <p class="mui-ellipsis">{{value.goods_name}}</p>
-                    <span>￥{{value.goods_price}}</span>
-                </a>
-            </li>
-        {{/each}}
-       
-
-</script>
-    <!-- 模板引擎 -->
 </body>
 
 </html>
+
 <script src="../lib/zepto/zepto.js"></script>
-<script src="../lib/arttemplate/template-web.js"></script>
 <script src="../lib/mui/js/mui.min.js"></script>
-<script src="../lib/iscroll/iscroll.js"></script>
 <script src="../js/commen.js"></script>
-<script src="../js/good_list.js"></script>
+<script src="../js/login.js"></script>

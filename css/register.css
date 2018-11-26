@@ -1,0 +1,35 @@
+.pyg_header {
+  padding: 0 5px;
+}
+
+.pyg_view form {
+  margin: 5px;
+}
+
+.pyg_view form .vcode {
+  position: relative;
+}
+
+.pyg_view form .vcode .btn_vcode {
+  position: absolute;
+  right: 4px;
+  height: 30px;
+  top: 5px;
+  width: auto;
+  padding-top: 7px;
+}
+
+.pyg_view .btn_lr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pyg_view .btn_lr a, .pyg_view .btn_lr button {
+  width: 49%;
+}
+/*# sourceMappingURL=register.css.map */
