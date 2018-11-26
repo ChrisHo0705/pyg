@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/commen.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+
+<body>
+    <div class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </div>
+
+    <div class="pyg_view">
+        <div class="pyg_left">
+        </div>
+        <div class="pyg_right">
+        </div>
+    </div>
+
+    <div class="pyg_footer">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-home"></span>
+                    <div>首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="./pages/category.html">
+                    <span class="fa fa-list-ul"></span>
+                    <div>分类</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-shopping-cart"></span>
+                    <div>购物车</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-user-circle-o"></span>
+                    <div>我的</div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 模板引擎 -->
+    <!-- 左边列表 -->
+    <script type="text/template" id="categorylistTemp">
+        <ul>
+                    {{each data value index}}
+                    {{if index==0}}
+                        <li class="active"><a href="#">{{value.cat_name}}</a></li> 
+                     {{/if}}
+                     {{if index!=0}}
+                        <li><a href="#">{{value.cat_name}}</a></li> 
+                     {{/if}}
+                    {{/each}}
+                    </ul>
+            </script>
+    <!-- 右边列表 -->
+    <script type="text/template" id="categoryPicTemp">
+        <div class="rightlist">
+                {{each data value index}}
+                    <div class="gooditem"> 
+                            <div class="listtitle">{{value.cat_name}}</div>
+                            
+                            <div class="listdetail">
+                                <ul>
+                                        {{each value.children subvalue subindex}}
+                                     <li>
+                                         <a href="./good_list.html?cid={{subvalue.cat_id}}">
+                                                <img src="http://api.pyg.ak48.xyz/{{subvalue.cat_icon}}"
+                                                    alt="">
+                                            </a>
+                                            <div>{{subvalue.cat_name}}</div>
+                                        </li>
+                                        {{/each}}
+                                </ul>   
+                            </div>
+                    </div> 
+                    {{/each}}
+                </div>
+                
+                
+            </script>
+    <!-- 模板引擎 -->
+</body>
+
+</html>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/commen.js"></script>
+<script src="../js/category.js"></script>

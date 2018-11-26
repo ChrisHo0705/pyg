@@ -1,0 +1,66 @@
+ .pyg_view{
+     display: flex;
+    
+     .pyg_left{
+         width: 80px;  
+         overflow: scroll;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0; 
+            li{ 
+                a{
+                    display: block;
+                    height: 40px;
+                    color: #000;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+                &.active{
+                    background-color: #fff;
+                    border-left: 3px solid #0094ff;
+                }
+            }
+        }  
+     }
+     .pyg_right{
+         
+         flex: 1;
+         background-color: #fff;
+         overflow: scroll; 
+        .rightlist{ 
+             
+            .listtitle{
+                padding-left: 10px;
+                height: 40px;
+               line-height: 40px; 
+                color: #0094ff;
+                font-size: 16px;
+
+            }
+            .listdetail{
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: 33.33%;
+                        text-align: center;
+                        a{
+                            display: block;
+                            img{
+                                width: 80%;
+                            }
+                        }
+                        div{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+     }
+ }

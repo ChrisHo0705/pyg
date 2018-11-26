@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/commen.css">
+    <link rel="stylesheet" href="../css/good_detail.css">
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav pyg_header">
+        <h1 class="mui-title">商品详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+    <div class="pyg_view">
+
+
+    </div>
+
+    <div class="pyg_footer">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-weixin"></span>
+                    <div>客服</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="fa fa-phone"></span>
+                    <div>客服</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+
+                    <div>立即购买</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>加入购物车</div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 模板引擎 -->
+    <script type="text/template" id="goodDetailTemp">
+        <!-- 轮播图 -->
+        <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+          
+    <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#">
+            <img src="{{pics[pics.length-1].pics_mid_url}}" />
+        </a>
+    </div>
+          {{each pics value index}}
+          <div class="mui-slider-item"><a href="#"><img src="{{value.pics_mid_url}}" /></a></div>
+          {{/each}}
+        
+          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pics[0].pics_mid_url}}" /></a></div>
+        </div>
+        <div class="mui-slider-indicator">
+                {{each pics value index}}
+                {{if index==0}}
+                <div class="mui-indicator mui-active"></div>
+                {{/if}}
+                {{if index!=0}}
+                <div class="mui-indicator"></div>
+                {{/if}}
+                {{/each}}
+		</div>
+      </div>
+<!-- 商品信息 -->
+<p class="goods_name">{{goods_name}}</p>
+<span class="goods_price">￥{{goods_price}}</span>
+<ul class="goods_ul">
+        <li>
+                <span>已选</span>
+                <span>白色</span>
+           </li>
+           <li>
+                <span>促销</span>
+                <span>是</span>
+           </li>
+           <li>
+                <span>送至</span>
+                <span>上海市</span>
+           </li>
+           <li>
+                <span>运费</span>
+                <span>免运费</span>
+           </li>
+
+</ul>
+<!-- table栏切换 -->
+<div class="tablechange">
+        <div id="segmentedControl" class="mui-segmented-control">
+                <a class="mui-control-item mui-active" href="#item1">
+            图文详情
+        </a>
+                <a class="mui-control-item" href="#item2">
+            规格参数
+        </a>
+    </div>
+    <div class="tablechangecontent">
+            <div id="item1" class="mui-control-content mui-active">
+                {{@goods_introduce}}
+            </div>
+            <div id="item2" class="mui-control-content">
+                <ul>
+                {{each attrs value index}}
+                    <li>
+                        <p>{{value.attr_name.split("-")[0]}}</p>
+                        <span>{{value.attr_name.split("-")[1]}}</span>
+                        <span>{{value.attr_value}}</span>
+                    </li>
+                {{/each}}
+            </ul>
+            </div>
+        </div>
+</div>
+   </script>
+
+
+
+    <!-- 模板引擎 -->
+</body>
+
+</html>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/commen.js"></script>
+<script src="../js/good_detail.js"></script>

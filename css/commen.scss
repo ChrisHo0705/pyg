@@ -1,0 +1,77 @@
+html,body{
+    height: 100%; 
+}
+body{
+    padding: 45px 0 50px 0 ;
+    // margin: 45px 0 50px 0 ;
+}
+.pyg_header{
+    height: 45px;
+    position: fixed;
+    width: 100%;
+    top:0 ;
+    left: 0;
+    padding: 5px;
+    background-color: #fff;
+} 
+.pyg_footer{
+    height: 50px;
+    position: fixed;  
+    width: 100%;  
+    bottom:0 ;
+    left: 0;
+    background-color: #fff;
+    ul{
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #ccc;
+        li{
+            flex: 1;
+            padding-top: 4px;
+            a{
+                color: black;
+                display: block;
+                text-align: center;
+                
+                span{
+                    font-size: 22px;
+                }
+                div{
+                    font-size: 13px;
+                }
+            }
+            
+        }
+    }
+}
+.pyg_view{ 
+    height: 100%;    
+    overflow: scroll;
+}
+.loadding { 
+    &::before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      opacity: .5;
+      content: "";
+      z-index: 100;
+    }
+    &::after {
+      font: normal normal normal 14px/1 FontAwesome;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      margin-left: -60px;
+      font-size: 120px;
+      color:#666;
+      content: "\f013";
+      z-index: 101;
+      animation: fa-spin 2s infinite linear;
+    }
+  }

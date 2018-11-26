@@ -1,0 +1,75 @@
+.pyg_view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_view .pyg_left {
+  width: 80px;
+  overflow: scroll;
+}
+
+.pyg_view .pyg_left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pyg_view .pyg_left ul li a {
+  display: block;
+  height: 40px;
+  color: #000;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.pyg_view .pyg_left ul li.active {
+  background-color: #fff;
+  border-left: 3px solid #0094ff;
+}
+
+.pyg_view .pyg_right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.pyg_view .pyg_right .rightlist .listtitle {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  color: #0094ff;
+  font-size: 16px;
+}
+
+.pyg_view .pyg_right .rightlist .listdetail ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pyg_view .pyg_right .rightlist .listdetail ul li {
+  width: 33.33%;
+  text-align: center;
+}
+
+.pyg_view .pyg_right .rightlist .listdetail ul li a {
+  display: block;
+}
+
+.pyg_view .pyg_right .rightlist .listdetail ul li a img {
+  width: 80%;
+}
+
+.pyg_view .pyg_right .rightlist .listdetail ul li div {
+  font-size: 16px;
+}
+/*# sourceMappingURL=category.css.map */

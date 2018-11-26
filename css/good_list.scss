@@ -1,0 +1,52 @@
+.pyg_header{
+     padding: 0 5px;
+     background-color: #0094ff;
+     a,h1{
+        color: #fff;
+     }
+     
+}
+.pyg_view{
+    position: relative;
+    overflow: hidden;
+   div{
+    
+    ul{ 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: flex;
+            background-color: #fff;
+            margin: 8px 8px 0;
+            
+            a{
+                flex: 1;
+                padding: 5px 5px;
+                
+            }
+            a:nth-child(1){
+                img{
+                    width: 70%;
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+            a:nth-child(2){
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 10px 0;
+                p{
+                    font-size: 13px;
+                }
+                span{
+                    color: red;
+                }
+            }
+        }
+    }
+   }
+   
+}
